@@ -17,9 +17,9 @@ class State(Enum):
 
 def select_children(state):
     if state == State.ABOUT:
-        return about_page()
+        return about_page(state.name.lower())
     elif state == State.SKILLS:
-        return skills_page()
+        return skills_page(state.name.lower())
     elif state == State.EDUCATION:
         return html.A(children="This is a page about Liam's education.")
     elif state == State.EXPERIENCE:

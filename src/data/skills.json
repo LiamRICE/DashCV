@@ -1,0 +1,68 @@
+{
+    "skills":[
+        {
+            "type":"Programming Languages",
+            "text":"These are the programming languages with which Liam has experience. Each card shows a programming language, and the relative level of competency out of 10 for that skill, and how many years of experience using that programming language he has. This page serves to help you get an idea of Liam's key technical competencies.",
+            "list":[
+                {
+                    "name":"Python",
+                    "level":10,
+                    "years":7
+                },
+                {
+                    "name":"C/C++",
+                    "level":7,
+                    "years":2
+                },
+                {
+                    "name":"Java",
+                    "level":9,
+                    "years":3
+                },
+                {
+                    "name":"JavaScript",
+                    "level":5,
+                    "years":3
+                },
+                {
+                    "name":"C#",
+                    "level":8,
+                    "years":2
+                },
+                {
+                    "name":"TypeScript",
+                    "level":3,
+                    "years":1
+                },
+                {
+                    "name":"SQL",
+                    "level":8,
+                    "years":5
+                },
+                {
+                    "name":"Assembly",
+                    "level":2,
+                    "years":0
+                }
+            ]
+        },
+        {
+            "type":"Soft Skills",
+            "text":"This page lists the soft skills Liam has. These show that he is an Engineer that is capable of learning and adapting to new situations, while maintaining responsibility towards the company and its users.",
+            "list":[
+                {
+                    "name":"Curiosity"
+                },
+                {
+                    "name":"Responsibility"
+                },
+                {
+                    "name":"Trust"
+                },
+                {
+                    "name":"Efficiency"
+                }
+            ]
+        }
+    ]
+}
