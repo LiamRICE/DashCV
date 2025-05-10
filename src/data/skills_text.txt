@@ -1,0 +1,17 @@
+## Liam's Skills
+
+Liam is skilled in many programming languages, but specialises in Python and other Object Oriented programming languages. His wide knowledge base makes him quick to learn new libraries and languages, but his specialisation in Python also allows him deep existing knowledge in that language's wide array of libraries such as:
+- PyTorch
+- TensorFlow
+- SciKitLearn
+- Numpy
+- Pandas
+- MatPlotLib
+- Plotly
+- Dash
+
+He also has a number of soft skills that make it easy for him to work with and integrate a team to design and create complex software systems.
+
+You can look at some of his projects on [GitHub](https://github.com/LiamRICE?tab=repositories) and his profile on [LinkedIn](https://www.linkedin.com/in/liam-rice-203329187/).
+
+You can look at the complete list of his skills here below:

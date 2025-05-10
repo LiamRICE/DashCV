@@ -25,9 +25,20 @@ def read_json(source:str) -> pd.DataFrame:
     data = {}
     decoder = json.JSONDecoder()
 
-    with open("./src/data/skills.json", "r") as f:
+    with open(source, "r") as f:
         data = f.read()
         f.close()
         data = decoder.decode(data)
 
+    return data
+
+
+
+def read_txt(source:str) -> str:
+    data = ""
+
+    with open(source, "r") as f:
+        data = f.read()
+        f.close()
+    
     return data

@@ -4,11 +4,12 @@ import plotly.express as px
 import pandas as pd
 import json
 import dash_bootstrap_components as dbc
-from src.utils.utils import read_json
+from src.utils.utils import read_json, read_txt
 
 def skills_page(name:str):
     # read data
-    data = read_json("./src/data/"+name+".csv")
+    data = read_json("./src/data/"+name+".json")
+    skills_text_general = read_txt("./src/data/"+name+"_text.txt")
 
     # set up formatted data
     tab_names = []
@@ -79,6 +80,7 @@ def skills_page(name:str):
 
     # setting up main component
     component = html.Div(children=[
+        dcc.Markdown(children=skills_text_general),
         dbc.Tabs(
             children=tabs
         )
