@@ -3,6 +3,11 @@ from dash import html
 import json
 
 
+def read_csv(source:str) -> pd.DataFrame:
+    df = pd.read_csv(source, header=0)
+    return df
+
+
 
 def get_data(source:str) -> list:
     # reading data

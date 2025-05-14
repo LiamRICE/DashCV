@@ -43,6 +43,11 @@
                     "name":"Assembly",
                     "level":2,
                     "years":0
+                },
+                {
+                    "name":"R",
+                    "level":3,
+                    "years":1
                 }
             ]
         },

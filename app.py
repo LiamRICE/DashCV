@@ -7,6 +7,7 @@ from src.modules.top_bar import header
 from src.modules.about_page import about_page
 from src.modules.skills_page import skills_page
 from src.modules.home_page import home_page
+from src.modules.experience_page import experience_page
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
@@ -27,7 +28,7 @@ def select_children(state):
     elif state == State.EDUCATION:
         return html.A(children="This is a page about Liam's education.")
     elif state == State.EXPERIENCE:
-        return html.A(children="This is a page about Liam's work experience.")
+        return experience_page(state.name.lower())
 
 app.layout = html.Div(children=[
     header(["about", "skills", "experience", "education"]),
@@ -36,7 +37,7 @@ app.layout = html.Div(children=[
         dcc.Location(id='url', refresh=False),
         # content will be rendered in this element
         html.Div(id='page-content')
-    ])
+    ], style={"padding":20})
 ])
 
 
