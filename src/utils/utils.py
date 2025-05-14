@@ -37,8 +37,13 @@ def read_json(source:str) -> pd.DataFrame:
 def read_txt(source:str) -> str:
     data = ""
 
-    with open(source, "r") as f:
-        data = f.read()
+    try:
+        with open(source, encoding="UTF-8") as f:
+            data = f.read()
+    except:
         f.close()
+        with open(source, encoding="UTF-16") as f:
+            data = f.read()
+            f.close()
     
     return data

@@ -6,16 +6,20 @@ import dash_bootstrap_components as dbc
 from src.modules.top_bar import header
 from src.modules.about_page import about_page
 from src.modules.skills_page import skills_page
+from src.modules.home_page import home_page
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 class State(Enum):
-    ABOUT = 0
-    SKILLS = 1
-    EXPERIENCE = 2
-    EDUCATION = 3
+    HOME = 0
+    ABOUT = 1
+    SKILLS = 2
+    EXPERIENCE = 3
+    EDUCATION = 4
 
 def select_children(state):
+    if state == State.HOME:
+        return home_page(state.name.lower())
     if state == State.ABOUT:
         return about_page(state.name.lower())
     elif state == State.SKILLS:
@@ -66,6 +70,8 @@ app.layout = html.Div(children=[
 # Update the index
 @callback(Output('page-content', 'children'), Input('url', 'pathname'))
 def display_page(pathname):
+    if pathname == '/':
+        return select_children(State.HOME)
     if pathname == '/about':
         return select_children(State.ABOUT)
     elif pathname == '/skills':
